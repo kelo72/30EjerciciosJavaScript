@@ -1,7 +1,6 @@
-
-
 html {
-    background: #018DED;
+    background-image:url(/02Reloj-CSS-JS/img/peakpx.jpg);
+    /*background: #018DED;*/
     background-size: cover;
     font-family: 'helvetica neue';
     text-align: center;
@@ -18,8 +17,8 @@ html {
   }
 
   .clock {
-    width: 35rem;
-    height: 35rem;
+    width: 40rem;
+    height: 40rem;
     border: 2px solid white;
     border-radius: 50%;
     margin: 50px auto;
@@ -36,19 +35,34 @@ html {
     position: relative;
     width: 100%;
     height: 100%;
-    transform: translateY(-3px); /* account for the height of the clock hands */
+    text-align: center;
   }
 
   .hand {
+    border-radius: 35%;
     width: 50%;
     height: 6px;
     background: black;
     position: absolute;
     top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0s; /*quite la transision por que al llegar al final la aguja 
+                        se resetea y se ve como vuelve a la posicion inicial */
   }
 
   .imagen{
-    width: 35rem;
-    height: 35rem;
+    width: 40rem;
+    height: 40rem;
+    position: relative;
   }
 
+  .centro{
+    margin:0 auto;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: black;
+    position: relative;
+    bottom: 53%;
+  }
